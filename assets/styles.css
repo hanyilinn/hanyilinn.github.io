@@ -52,11 +52,27 @@ a:hover {
 
 .hero {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: minmax(0, 1fr) 210px;
   gap: 28px;
-  align-items: start;
+  align-items: center;
   padding-bottom: 32px;
   border-bottom: 1px solid var(--line);
+}
+
+.hero-profile {
+  display: grid;
+  gap: 16px;
+  justify-items: end;
+}
+
+.profile-photo {
+  display: block;
+  width: 180px;
+  height: auto;
+  border: 1px solid #d6deea;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 14px 32px rgba(23, 32, 51, 0.13);
 }
 
 .eyebrow {
@@ -449,6 +465,15 @@ h3 {
 
   .hero {
     grid-template-columns: 1fr;
+  }
+
+  .hero-profile {
+    justify-items: start;
+  }
+
+  .profile-photo {
+    width: 150px;
+    border-radius: 18px;
   }
 
   .links {
